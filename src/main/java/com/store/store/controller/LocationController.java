@@ -1,0 +1,51 @@
+package com.store.store.controller;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.store.store.model.Category;
+import com.store.store.model.Location;
+
+@RestController
+@RequestMapping("/locations")
+public class LocationController {
+
+    @GetMapping("/all")
+    public List<Location> getAll() throws Exception {
+        // String json = service.getAllCategories().toString(); // get raw JSON
+        // Convert JSON to List<Category>
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule()); // Support LocalDate
+
+        // Load from file
+        /*
+         * File file = new File("data.json");
+         * List<Location> locations = List.of(mapper.readValue(file, Location[].class));
+         */
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("data.json");
+
+        if (inputStream == null) {
+            throw new FileNotFoundException("File not found in resources!");
+        }
+        List<Location> locations = List.of(mapper.readValue(inputStream, Location[].class));
+
+        // Print example
+        for (Location loc : locations) {
+            System.out.println("Location: " + loc.getName());
+            for (Category cat : loc.getCategories()) {
+                System.out.println(
+                        " - Category: " + cat.getName() + ", Start Date: " + cat.getCategoryDetails().getStartDate());
+            }
+        }
+        return locations;
+
+    }
+}

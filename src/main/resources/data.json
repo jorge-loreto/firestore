@@ -1,0 +1,292 @@
+[
+    {
+        "id": "1",
+        "name": "PALO ALTO",
+        "description": "EL LLANO, AGUASCALIENTES",
+        "address": "20 de Noviembre #121 PLAZA VANE Centro, El Llano, Aguascalientes",
+        "city": "El Llano",
+        "state": "Aguascalientes",
+        "zip": "20330",
+        "phone": "496-124-4536",
+        "tarjetaBancomer":"4152-3144-5920-1524",
+        "oxxo":"no",
+        "categoriesList": [
+            "981ada40-16f1-4413-a554-56f6e4edbaec",
+            "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+            "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+            "32f03f0b-846f-44df-82dc-c758412f0d55"
+        ],
+        "categories": [
+            {
+                "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+                "name": "BARBERIA",
+                "description": "",
+                "image": "barberia-paloAlto.jpeg",
+                "categoryDetails": {
+                    "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43:1",
+                    "horario": "Domingos de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-08-03",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+                "name": "Estilismo Profesional",
+                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "estilismo-paloAlto.jpg",
+                "categoryDetails": {
+                    "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:2",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-07-19",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "32f03f0b-846f-44df-82dc-c758412f0d55",
+                "name": "Auxiliar de Enfermeria",
+                "description": "Inicio de cursos de enfermeria 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "enfermeria-PaloAlto.jpg",
+                "categoryDetails": {
+                    "id": "32f03f0b-846f-44df-82dc-c758412f0d55:2",
+                    "horario": "Todos los Sabados de 9am a 1pm, Colegiatura semanal, duracion de un año",
+                    "startDate": "2025-07-19",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "TLALTENANGO",
+        "description": "TLALTENANGO, ZACATECAS",
+        "address": "Heroico Colegio Militar #19 interior 307 3er piso, Colonia Centro. Edificio Oficenter",
+        "city": "Tlaltenango",
+        "state": "Zacatecas",
+        "zip": "99999",
+        "phone": "496-124-4536",
+        "tarjetaBancomer":"4152-3144-5920-1524",
+        "oxxo":"si",
+        "categoriesList": [
+            "981ada40-16f1-4413-a554-56f6e4edbaec",
+            "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+            "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+            "32f03f0b-846f-44df-82dc-c758412f0d55"
+        ],
+        "categories": [
+            {
+                "id": "32f03f0b-846f-44df-82dc-c758412f0d55",
+                "name": "Auxiliar de Enfermeria",
+                "description": "Inicio de cursos de enfermeria 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "iteci-talte-enf.jpeg",
+                "categoryDetails": {
+                    "id": "32f03f0b-846f-44df-82dc-c758412f0d55:2",
+                    "horario": "Todos los Viernes de 4pm a 8pm, Colegiatura semanal, duracion de un año",
+                    "startDate": "2025-07-18",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "981ada40-16f1-4413-a554-56f6e4edbaec",
+                "name": "PREPARATORIA",
+                "description": "",
+                "image": "prepa.jpeg",
+                "categoryDetails": {
+                    "id": "981ada40-16f1-4413-a554-56f6e4edbaec:2",
+                    "horario": "Clases de preparatoria en linea en tan solo 4 meses, Colegiatura semanal $300, inscripción $1000, Supervisión semanal",
+                    "startDate": "Inicia en el momento de tu inscripcion",
+                    "costoInscripcion": 500.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+                "name": "BARBERIA",
+                "description": "",
+                "image": "barber.jpg",
+                "categoryDetails": {
+                    "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43:2",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-01-15",
+                    "costoInscripcion": 500.0,
+                    "costoColegiatura": 300.0,
+                    "admision": false
+                }
+            },
+            {
+                "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+                "name": "Estilismo Profesional",
+                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "unias.jpg",
+                "categoryDetails": {
+                    "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:2",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-01-15",
+                    "costoInscripcion": 500.0,
+                    "costoColegiatura": 300.0,
+                    "admision": false
+                }
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "PINOS",
+        "description": "PINOS, ZACATECAS",
+        "address": "Centro de capacitacion iTECi, Calle Encarnación #7, planta alta Colonia Centro. A un costado de la Farmacia Similares",
+        "city": "Pinos",
+        "state": "Zacatecas",
+        "zip": "99999",
+        "phone": "496-124-4536",
+        "tarjetaBancomer":"4152-3144-5920-1524",
+        "oxxo":"si",
+        "categoriesList": [
+            "981ada40-16f1-4413-a554-56f6e4edbaec",
+            "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+            "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+            "32f03f0b-846f-44df-82dc-c758412f0d55"
+        ],
+        "categories": [
+            {
+                "id": "981ada40-16f1-4413-a554-56f6e4edbaec",
+                "name": "Preparatoria",
+                "description": "Inicio de cursos de preparatoria 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "prepa-pinos.jpeg",
+                "categoryDetails": {
+                    "id": "981ada40-16f1-4413-a554-56f6e4edbaec:3",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-08-16",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+                "name": "Barber Shop",
+                "description": "",
+                "image": "barber.jpg",
+                "categoryDetails": {
+                    "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43:3",
+                    "horario": "Sabados de 1pm a 5pm Colegiatura semanal",
+                    "startDate": "2025-08-02",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+                "name": "Estilismo Profesional",
+                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "estilismo-pinos.jpeg",
+                "categoryDetails": {
+                    "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:3",
+                    "horario": "Domingos de 2pm a 6pm Colegiatura semanal",
+                    "startDate": "2025-06-15",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "32f03f0b-846f-44df-82dc-c758412f0d55",
+                "name": "Auxiliar de Enfermería",
+                "description": "",
+                "image": "enf-pinos.jpeg",
+                "categoryDetails": {
+                    "id": "32f03f0b-846f-44df-82dc-c758412f0d55:3",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-06-14",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "abc123",
+        "name": "LORETO",
+        "description": "LORETO, ZACATECAS",
+        "address": "Calle Enrique Estrada #102 planta alta, Centro.  Arriba de calzapiel y a un costado de la plaza principal",
+        "city": "Loreto",
+        "state": "Zacatecas",
+        "zip": "92000",
+        "phone": "496-124-4536",
+        "tarjetaBancomer":"4152-3144-5920-1524",
+        "oxxo":"si",
+        "categoriesList": [
+            "981ada40-16f1-4413-a554-56f6e4edbaec",
+            "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+            "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+            "32f03f0b-846f-44df-82dc-c758412f0d55"
+        ],
+        "categories": [
+            {
+                "id": "981ada40-16f1-4413-a554-56f6e4edbaec",
+                "name": "PREPARATORIA",
+                "description": "",
+                "image": "prepa.jpeg",
+                "categoryDetails": {
+                    "id": "981ada40-16f1-4413-a554-56f6e4edbaec:abc123",
+                    "horario": "Sabados de 9am a 1pm Colegiatura semanal",
+                    "startDate": "Curso ya iniciado",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43",
+                "name": "BARBERIA",
+                "description": "Inicio de cursos de barberia 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "barber.jpg",
+                "categoryDetails": {
+                    "id": "19056d62-e93c-42e0-9b2b-4453aaca6d43:abc123",
+                    "horario": "Sabados de 1pm a 5pm, Colegiatura semanal",
+                    "startDate": "Curso ya iniciado",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": true
+                }
+            },
+            {
+                "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
+                "name": "Estilismo Profesional",
+                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "unias.jpg",
+                "categoryDetails": {
+                    "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:abc123",
+                    "horario": "Domingos de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-05-18",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": false
+                }
+            },
+            {
+                "id": "32f03f0b-846f-44df-82dc-c758412f0d55",
+                "name": "ENFERMERIA",
+                "description": "Inicio de cursos de enfermeria 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "image": "enfermeria.jpeg",
+                "categoryDetails": {
+                    "id": "32f03f0b-846f-44df-82dc-c758412f0d55:abc123",
+                    "horario": "Domingos de 9am a 1pm Colegiatura semanal",
+                    "startDate": "2025-05-18",
+                    "costoInscripcion": 1000.0,
+                    "costoColegiatura": 300.0,
+                    "admision": false
+                }
+            }
+        ]
+    }
+]
