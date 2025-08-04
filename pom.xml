@@ -97,9 +97,17 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version> <!-- ✅ specify version -->
 		</dependency>
-			
-
-
+		<!-- Add your dependencies here -->
+		<dependency> 
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-security</artifactId> 
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.19</version>
+		</dependency>
+		
 	</dependencies>
 
 	<dependencyManagement>

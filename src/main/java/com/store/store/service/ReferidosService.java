@@ -40,7 +40,7 @@ public class ReferidosService {
                 .doOnSuccess(saved -> logger.info("Referido  saved SUCCESSFULLY: {}",
                         referido))
                 .doOnError(e -> logger.error("Error al guardar: " + e.getMessage()))
-                .subscribe();
+                .block();
 
         logger.info("Referido saved with ID: {}", referido.getId());
         return "Guardado exitosamente en: " + referido.getId();

@@ -95,9 +95,9 @@
             },
             {
                 "id": "981ada40-16f1-4413-a554-56f6e4edbaec",
-                "name": "PREPARATORIA",
+                "name": "PREPARATORIA EN LÍNEA",
                 "description": "",
-                "image": "prepa.jpeg",
+                "image": "PREPA-EN-LINEA.png",
                 "categoryDetails": {
                     "id": "981ada40-16f1-4413-a554-56f6e4edbaec:2",
                     "horario": "Clases de preparatoria en linea en tan solo 4 meses, Colegiatura semanal $300, inscripción $1000, Supervisión semanal",
@@ -124,7 +124,7 @@
             {
                 "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
                 "name": "Estilismo Profesional",
-                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "description": "Inicio de cursos de uñas 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
                 "image": "unias.jpg",
                 "categoryDetails": {
                     "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:2",
@@ -163,7 +163,7 @@
                 "categoryDetails": {
                     "id": "981ada40-16f1-4413-a554-56f6e4edbaec:3",
                     "horario": "Sabados de 9am a 1pm Colegiatura semanal",
-                    "startDate": "2025-08-16",
+                    "startDate": "2025-07-16",
                     "costoInscripcion": 1000.0,
                     "costoColegiatura": 300.0,
                     "admision": true
@@ -186,7 +186,7 @@
             {
                 "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
                 "name": "Estilismo Profesional",
-                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "description": "Inicio de cursos de uñas 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
                 "image": "estilismo-pinos.jpeg",
                 "categoryDetails": {
                     "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:3",
@@ -242,7 +242,7 @@
                     "startDate": "Curso ya iniciado",
                     "costoInscripcion": 1000.0,
                     "costoColegiatura": 300.0,
-                    "admision": true
+                    "admision": false
                 }
             },
             {
@@ -256,13 +256,13 @@
                     "startDate": "Curso ya iniciado",
                     "costoInscripcion": 1000.0,
                     "costoColegiatura": 300.0,
-                    "admision": true
+                    "admision": false
                 }
             },
             {
                 "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52",
                 "name": "Estilismo Profesional",
-                "description": "Inicio de cursos de uÃ±as 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
+                "description": "Inicio de cursos de uñas 15 de Abril 2025 Costo $300 semanal, inscripcion $500",
                 "image": "unias.jpg",
                 "categoryDetails": {
                     "id": "21dcf055-4e07-4853-915b-3a0e7f07ae52:abc123",

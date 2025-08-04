@@ -3,6 +3,9 @@ package com.store.store.model;
 import lombok.Data;
 import java.util.List;
 
+import com.google.cloud.spring.data.firestore.Document;
+
+@Document(collectionName = "locations")
 @Data
 public class Location {
     private String id;

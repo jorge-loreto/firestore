@@ -5,10 +5,11 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.List;
 
-//import org.springframework.data.annotation.Id;
+import com.google.cloud.spring.data.firestore.Document;
 
+//import org.springframework.data.annotation.Id;
+@Document(collectionName = "categories")
 @Data
-// @Document(indexName = "categories")
 public class Category {
     // @Id
     private String id;
