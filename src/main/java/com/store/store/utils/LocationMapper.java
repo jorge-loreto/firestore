@@ -1,0 +1,38 @@
+package com.store.store.utils;
+
+import java.util.stream.Collectors;
+
+import com.store.store.model.Category;
+import com.store.store.model.CategoryResponse;
+import com.store.store.model.Location;
+import com.store.store.model.LocationResponse;
+
+public class LocationMapper {
+
+    public static Location toLocation(LocationResponse response) {
+        Location location = new Location();
+        location.setId(response.getId());
+        location.setName(response.getName());
+        location.setDescription(response.getDescription());
+        location.setAddress(response.getAddress());
+        location.setCity(response.getCity());
+        location.setState(response.getState());
+        location.setZip(response.getZip());
+        location.setPhone(response.getPhone());
+        location.setTarjetaBancomer(response.getTarjetaBancomer());
+        location.setOxxo(response.getOxxo());
+
+        // Use the provided list of IDs, or derive them from Category objects if needed
+        if (response.getCategoriesList() != null && !response.getCategoriesList().isEmpty()) {
+            location.setCategoriesList(response.getCategoriesList());
+        } else if (response.getCategories() != null) {
+            // Extract IDs from nested Category objects
+            location.setCategoriesList(
+                    response.getCategories().stream()
+                            .map(CategoryResponse::getId)
+                            .collect(Collectors.toList()));
+        }
+
+        return location;
+    }
+}
