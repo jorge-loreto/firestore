@@ -13,7 +13,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.store.store.model.Category;
 import com.store.store.model.CategoryDetails;
 import com.store.store.repository.CategoryDetailsRepository;
+import com.store.store.service.CategoryService;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
@@ -28,6 +31,7 @@ public class CategoryDetailsRepositoryImpl implements CategoryDetailsRepository 
     private final Firestore firestore;
     private final ObjectMapper objectMapper;
     private final String COLLECTION_NAME = "categoryDetails";
+    private static final Logger logger = LogManager.getLogger(CategoryDetailsRepositoryImpl.class);
 
     @Autowired
     public CategoryDetailsRepositoryImpl(Firestore firestore, ObjectMapper objectMapper) {
@@ -69,6 +73,7 @@ public class CategoryDetailsRepositoryImpl implements CategoryDetailsRepository 
 
     @Override
     public Optional<CategoryDetails> findById(String id) {
+        logger.info("Finding CategoryDetails by ID: {}", id);
         DocumentReference docRef = firestore.collection(COLLECTION_NAME).document(id);
         try {
             DocumentSnapshot doc = toCompletableFuture(docRef.get()).get();

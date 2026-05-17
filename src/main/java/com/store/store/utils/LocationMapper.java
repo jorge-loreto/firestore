@@ -35,4 +35,29 @@ public class LocationMapper {
 
         return location;
     }
+
+    public static LocationResponse toLocationResponse(Location location) {
+        LocationResponse response = new LocationResponse();
+
+        response.setId(location.getId());
+        response.setName(location.getName());
+        response.setDescription(location.getDescription());
+        response.setAddress(location.getAddress());
+        response.setCity(location.getCity());
+        response.setState(location.getState());
+        response.setZip(location.getZip());
+        response.setPhone(location.getPhone());
+        response.setTarjetaBancomer(location.getTarjetaBancomer());
+        response.setOxxo(location.getOxxo());
+
+        // Use the provided list of category IDs, or derive CategoryResponse objects if
+        // needed
+        if (location.getCategoriesList() != null && !location.getCategoriesList().isEmpty()) {
+            response.setCategoriesList(location.getCategoriesList());
+        }
+        response.setCategories(null);
+
+        return response;
+    }
+
 }

@@ -90,7 +90,16 @@ public class BusinessController {
     public Map<String, Object> editBusiness(@PathVariable String id, @RequestBody Business businessEntity) {
         try {
             businessEntity.setId(id);
-            service.saveBusiness(businessEntity);
+            Business updatedBusiness = service.getBusinessById(id);
+            if (updatedBusiness == null) {
+                return ResponseWrapper.error(new Exception("Business not found"),
+                        "Business with id: " + id + " not found", businessEntity);
+            }
+            updatedBusiness.setCelular(businessEntity.getCelular());
+            updatedBusiness.setNombre(businessEntity.getNombre());
+            updatedBusiness.setNotas(businessEntity.getNotas());
+            logger.info("Updating Business: {}", updatedBusiness);
+            service.saveBusiness(updatedBusiness);
             return ResponseWrapper.successNoMessages();
         } catch (Exception e) {
             logger.error("Error editing Business: {}", e.getMessage());

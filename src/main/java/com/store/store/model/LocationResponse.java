@@ -8,6 +8,7 @@ import com.google.cloud.spring.data.firestore.Document;
 @Document(collectionName = "locations")
 @Data
 public class LocationResponse {
+
     @DocumentId
     private String id;
     private String name;

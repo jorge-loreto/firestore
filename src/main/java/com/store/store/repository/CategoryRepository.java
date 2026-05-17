@@ -1,5 +1,6 @@
 package com.store.store.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.google.cloud.spring.data.firestore.FirestoreReactiveRepository;
@@ -18,5 +19,7 @@ public interface CategoryRepository {
     boolean findById2(String id);
 
     Optional<Category> findById(String id);
+
+    List<Category> findAll();
 
 }

@@ -81,6 +81,31 @@ public class BusinessService {
         }
     }
 
+    public Business getBusinessById(String id) {
+        logger.info("Fetching business with ID: {}", id);
+        Optional<Business> businessOpt = repository.findById(id);
+        logger.info("Business fetched: {}", businessOpt);
+        return businessOpt.orElse(null);
+    }
+
+    public boolean updateBusiness(Business business) {
+        logger.info("Updating business with ID: {}", business.getId());
+        if (business == null || business.getId() == null) {
+            logger.error("Business or Business ID is null, cannot update.");
+            return false;
+        }
+
+        Optional<Business> existingBusinessOpt = repository.findById(business.getId());
+        if (existingBusinessOpt.isPresent()) {
+            repository.save(business);
+            logger.info("Business updated successfully: {}", business);
+            return true;
+        } else {
+            logger.error("Business with ID: {} not found, cannot update.", business.getId());
+            return false;
+        }
+    }
+
 }
 
 // Aquí puedes agregar más métodos relacionados con Referidos si es necesary

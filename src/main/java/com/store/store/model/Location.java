@@ -10,6 +10,7 @@ import com.google.cloud.spring.data.firestore.Document;
 @Data
 public class Location {
     @DocumentId
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private String id;
     private String name;
     private String description;

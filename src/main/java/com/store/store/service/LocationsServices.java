@@ -2,11 +2,16 @@ package com.store.store.service;
 
 import java.util.List;
 import java.util.Optional; // ADD THIS
+import java.util.Random;
+import java.util.UUID;
 import java.util.stream.Collectors; // Potentially needed for collecting Iterables
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.store.store.controller.LocationController;
 import com.store.store.model.Category;
 import com.store.store.model.CategoryDetails;
 import com.store.store.model.CategoryResponse;
@@ -28,6 +33,7 @@ import java.util.Arrays;
 
 @Service
 public class LocationsServices {
+    private static final Logger logger = LogManager.getLogger(LocationsServices.class);
 
     @Autowired
     private LocationRepository locationRepository;
@@ -67,6 +73,7 @@ public class LocationsServices {
 
     // Mono<Location> saveLocation(Location location) becomes:
     public Location saveLocation(Location location) {
+        location.setId(UUID.randomUUID().toString().substring(0, 5));
         return locationRepository.save(location);
     }
 
@@ -82,6 +89,7 @@ public class LocationsServices {
 
     // Mono<Location> getLocationById(String id) becomes:
     public Optional<Location> getLocationById(String id) {
+        logger.info("Fetching location with ID: {}", id);
         return locationRepository.findById(id);
     }
 
@@ -121,12 +129,13 @@ public class LocationsServices {
     // NEW: Get all locations with details - this will be complex to convert fully
     // blocking
     public List<LocationResponse> getLocationsIteci(String locs) {
+        logger.info("Fetching locations for locs: {}", locs);
         List<LocationResponse> allResponses = new ArrayList<>();
         if (locs == null || locs.isEmpty()) {
             locs = "1,2,3,abc123";
         }
         List<String> locationIds = Arrays.asList(locs.split(","));
-
+        logger.info("Parsed location IDs: {}", locationIds);
         Iterable<Location> locations = locationRepository.findAllById(locationIds);
 
         for (Location location : locations) {
@@ -183,4 +192,17 @@ public class LocationsServices {
         String formattedDate = today.format(formatter);
         return String.valueOf(formattedDate);
     }
+
+    public List<Location> getLocationsByIds(List<String> locIds) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getLocationsByIds'");
+    }
+
+    public boolean updateLocation(Location location) {
+        if (locationRepository.save(location) == null) {
+            return false;
+        }
+        return true;
+    }
+
 }

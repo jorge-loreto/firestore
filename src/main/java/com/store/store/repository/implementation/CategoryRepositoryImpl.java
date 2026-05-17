@@ -145,4 +145,24 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         }
     }
 
+    @Override
+    public List<Category> findAll() {
+        try {
+            ApiFuture<QuerySnapshot> future = firestore.collection(COLLECTION_NAME).get();
+            List<QueryDocumentSnapshot> documents = toCompletableFuture(future).get().getDocuments();
+
+            return documents.stream().map(doc -> {
+                Category category = objectMapper.convertValue(doc.getData(), Category.class);
+                category.setId(doc.getId()); // ensure ID is included
+                return category;
+            }).collect(Collectors.toList());
+
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return Collections.emptyList();
+        } catch (ExecutionException e) {
+            throw new RuntimeException("Failed to retrieve all categories", e);
+        }
+    }
+
 }

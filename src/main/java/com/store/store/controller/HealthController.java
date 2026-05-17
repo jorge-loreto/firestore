@@ -10,6 +10,6 @@ public class HealthController {
 
     @GetMapping("/pong")
     public String ping() {
-        return "PING- PONG monday 25 September 2025 last deployment date";
+        return "PING- PONG Sunday 17 May 2026 last deployment date";
     }
 }
